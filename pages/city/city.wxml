@@ -1,0 +1,54 @@
+<!--pages/city/city.wxml-->
+<view class="city-container">
+  <scroll-view scroll-y="true" style="height:100%;" scroll-into-view="{{toView}}">
+    <view class="loaction-city">
+      <text class="loaction-city-label">定位城市——{{curCityDesc}}</text>
+      <view class="loaction-city-list">
+        <view class="location-city-item">
+          <text></text>
+          <text>{{curCity}}</text>
+        </view>
+        <view class="location-city-item">
+          <text></text>
+          <text bindtap="add">重新定位</text>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="welcome-city">
+      <text class="welcome-city-label">热门城市</text>
+      <view class="welcome-city-list">
+        <block wx:for="{{welcomeCity}}" wx:key="{{index}}">
+          <view class="welcome-city-item">
+            <text></text>
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="all-server-city">
+      <text class="welcome-city-label">服务城市</text>
+      <block wx:for="{{cityData}}" wx:key="{{index}}">
+        <text id="{{item.initial}}"> {{item.initial}}</text>
+        <view class="all-server-list">
+          <block wx:for="{{item.list}}" wx:key="{{index}}">
+            <view class="all-server-item">
+              <text></text>
+              <text>{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+      </block>
+
+
+    </view>
+  </scroll-view>
+
+  <view class="word-list">
+    <block wx:for="{{cityData}}" wx:key="{{index}}">
+      <text bindtap="linkCity" data-opt="{{item.initial}}"> {{item.initial}}</text>
+    </block>
+  </view>
+</view>

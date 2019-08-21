@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class="zoom-container">
+
+
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="top-container">
+    <navigator url="/pages/city/city" hover-class="navigator-hover">
+      北京
+    </navigator>
+
+    <text class="top-arraw"></text>
+    <view class="top-input">
+      <input type="text" placeholder="限时抢购"></input>
+      <text class="iconfont icon-icon-test top-serch"></text>
+    </view>
+    <image src="/images/message.png" class="top-message"></image>
+  </view>
+  <view class="swiper-container">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-c" ws:key="">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="category-con">
+    <view class="category-item">
+      <text class="title">新人福利</text>
+      <text class="title-tag-red">领礼包</text>
+      <view class="category-item-circle circle-red"></view>
+    </view>
+    <view class="category-item">
+      <text class="title">新人福利</text>
+      <text>领礼包</text>
+      <view class="category-item-circle circle-green"></view>
+    </view>
+    <view class="category-item">
+      <text class="title">毕业生专区</text>
+      <text class="title-tag">领礼包</text>
+      <view class="category-item-circle circle-origin"></view>
+    </view>
+    <view class="category-item">
+      <text class="title">职场专区</text>
+      <text>服务费折扣</text>
+      <view class="category-item-circle circle-blue"></view>
+    </view>
+  </view>
+  <view class="renting-container">
+    <view class="renting-item-b renting-item-b1">
+      <text class="title">合租</text>
+      <text class="title-tag">百万租客的选择</text>
+    </view>
+    <view class="renting-item-s renting-item-s1">
+      <text class="title">职场专区</text>
+      <text class="title-tag">服务费折扣</text>
+    </view>
+    <view class="renting-item-s renting-item-s1">
+      <text class="title">职场专区</text>
+      <text class="title-tag">服务费折扣</text>
+    </view>
+    <view class="renting-item-b renting-item-b2">
+      <text class="title">合租</text>
+      <text class="title-tag">百万租客的选择</text>
+    </view>
+    <view class="renting-item-s renting-item-s2">
+      <text class="title">职场专区</text>
+      <text class="title-tag">服务费折扣</text>
+    </view>
+    <view class="renting-item-s renting-item-s2">
+      <text class="title">职场专区</text>
+      <text class="title-tag">服务费折扣</text>
+
+    </view>
+    <view class="renting-item-b renting-item-b3">
+      <text class="title">搬家</text>
+      <text class="title-tag">百万租客的选择</text>
+
+    </view>
+    <view class="renting-item-s renting-item-s3">
+      <text class="title">职场专区</text>
+      <text class="title-tag">服务费折扣</text>
+    </view>
+    <view class="renting-item-s renting-item-s3">
+      <text class="title">职场专区</text>
+      <text class="title-tag">服务费折扣</text>
+
+    </view>
+  </view>
+</view>
